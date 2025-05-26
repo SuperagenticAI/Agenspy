@@ -25,11 +25,13 @@ pip install agenspy
 ```
 
 ### With MCP Support
+For enhanced functionality with the Model Context Protocol, install with MCP support:
 ```bash
 pip install "agenspy[mcp]"
 ```
 
 ### Development Installation
+To contribute to Agenspy or work with the latest development version:
 ```bash
 git clone https://github.com/superagenticai/Agenspy.git
 cd Agenspy
@@ -39,6 +41,7 @@ pip install -e ".[dev]"
 ## 🚀 Quick Start
 
 ### Basic MCP Agent
+Agenspy makes it easy to create AI agents that can interact with MCP servers. Here's a simple example of creating a pull request review agent:
 
 ```python
 import dspy
@@ -48,7 +51,7 @@ from agenspy import create_mcp_pr_review_agent
 lm = dspy.LM('openai/gpt-4o-mini')
 dspy.configure(lm=lm)
 
-# Create an MCP agent
+# Create an MCP agent connected to a GitHub server
 agent = create_mcp_pr_review_agent("mcp://github-server:8080")
 
 # Use the agent to review a pull request
@@ -62,6 +65,7 @@ print(f"Status: {result.approval_status}")
 ```
 
 ### Multi-Protocol Agent (Experimental)
+Agenspy supports multiple communication protocols simultaneously. Here's how to create an agent that can use both MCP and Agent2Agent protocols:
 
 ```python
 from agenspy import MultiProtocolAgent, MCPClient, Agent2AgentClient
@@ -81,6 +85,7 @@ result = agent("Analyze this repository for security issues")
 ```
 
 ### Custom Agent with Tools
+You can create custom agents with specialized functionality. Here's an example of a code review agent:
 
 ```python
 import asyncio
@@ -126,6 +131,8 @@ if __name__ == "__main__":
 
 ### Python MCP Server
 
+Launch a Python MCP server with custom tools:
+
 ```python
 
 from agentic_dspy.servers import GitHubMCPServer  
@@ -160,7 +167,6 @@ Agenspy provides a protocol-first approach to building AI agents:
 │ • Predict       │    │ • Capabilities   │    │ • File Access   │
 │ • ReAct         │    │ • Session State  │    │ • Web Search    │
 └─────────────────┘    └──────────────────┘    └─────────────────┘
-
 ```
 
 ### Core Components
@@ -176,11 +182,15 @@ Agenspy provides a protocol-first approach to building AI agents:
    - Provides consistent interface to agents
 
 3. **Protocol Implementations**
-   - MCP (Model Context Protocol)
-   - Agent2Agent Protocol
-   - Extensible for custom protocols
+   - **MCP (Model Context Protocol)**: For tool and model interactions
+   - **Agent2Agent Protocol**: For direct agent-to-agent communication
+   - Extensible architecture for custom protocol implementations
 
-### Advanced Usage Example: Custom MCP Server
+## Advanced Usage
+
+### Custom MCP Server
+
+Agenspy allows you to create custom MCP servers with specialized functionality. Here's an example of creating a custom MCP server with a custom operation:
 
 ```python
 from agenspy.servers.mcp_python_server import PythonMCPServer
@@ -251,13 +261,6 @@ See the examples/ directory for complete examples:
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on how to contribute to the project.
-
-### Development Setup
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📄 License
 

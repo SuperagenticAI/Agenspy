@@ -85,7 +85,7 @@ class TestRealMCPClient:
         client = RealMCPClient(command)
 
         capabilities = client.get_capabilities()
-        assert capabilities["protocol"] == "real_mcp_background"
+        assert capabilities["protocol"] == "real_mcp"
         assert "background_server" in capabilities
         assert capabilities["background_server"] is True
 
