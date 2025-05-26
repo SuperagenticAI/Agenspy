@@ -1,7 +1,9 @@
-dspy  
-pydantic>=2.0  
-fastapi>=0.100.0  
-uvicorn>=0.20.0  
-websockets>=11.0  
-asyncio  
+dspy
+pydantic>=2.0
+fastapi>=0.100.0
+uvicorn>=0.20.0
+websockets>=11.0
+asyncio
 typing-extensions
+click>=8.0
+pyyaml>=6.0
