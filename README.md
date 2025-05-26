@@ -305,7 +305,7 @@ The end goal is to merge this tool in the dspy main repo and make it a first-cla
 
 ### Get DSPy Listed in Google A2A Agent Directory
 
-Implementations of A2A and Get DSPy Listed in A2A Agent Directory (here)[https://github.com/google/A2A/blob/main/samples/python/agents/README.md] by building DSPy agents that utilize the A2A protocol.
+Implementations of A2A and Get DSPy Listed in A2A Agent Directory [here](https://github.com/google/A2A/blob/main/samples/python/agents/README.md) by building DSPy agents that utilize the A2A protocol.
 
 ### Future Work
 
