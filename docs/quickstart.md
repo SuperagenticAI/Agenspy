@@ -6,7 +6,7 @@
 
 ```python
 import dspy
-from agentic_dspy import create_mcp_agent
+from agenspy import create_mcp_pr_review_agent
 
 # Configure your language model
 lm = dspy.LM('openai/gpt-4o-mini')
@@ -16,7 +16,7 @@ dspy.configure(lm=lm)
 ### 2. Create an MCP Agent
 
 ```python
-agent = create_mcp_agent("mcp://github-server:8080")
+agent = create_mcp_pr_review_agent("mcp://github-server:8080")
 
 # Use the agent
 result = agent(
@@ -29,7 +29,7 @@ print(f"Review: {result.review_comment}")
 ### 3. Multi-Protocol Agent
 
 ```python
-from agentic_dspy import MultiProtocolAgent, MCPClient, Agent2AgentClient
+from agenspy import MultiProtocolAgent, MCPClient, Agent2AgentClient
 
 # Create multi-protocol agent
 agent = MultiProtocolAgent("my-agent")
@@ -81,5 +81,5 @@ from a2a import Agent2AgentClient as RealA2AClient
 ### 5. Getting Help
 
 For questions about the MOCK implementation or help with production integration:
-- Open an issue on our [GitHub repository](https://github.com/Shashikant86/Agentic-DSPy/issues)
+- Open an issue on our [GitHub repository](https://github.com/superagenticai/Agenspy/issues)
 - Reference the [Google A2A documentation](https://github.com/google/A2A) for production use

@@ -3,7 +3,7 @@
 import dspy
 import pytest
 
-from agentic_dspy.agents.github_agent import GitHubPRReviewAgent
+from agenspy.agents.github_agent import GitHubPRReviewAgent
 
 
 class TestGitHubPRReviewAgent:
@@ -77,7 +77,7 @@ class TestMultiProtocolAgent:
 
     def test_multi_protocol_agent_initialization(self):
         """Test multi-protocol agent initialization."""
-        from agentic_dspy.agents.multi_protocol_agent import MultiProtocolAgent
+        from agenspy.agents.multi_protocol_agent import MultiProtocolAgent
 
         agent = MultiProtocolAgent("test-agent")
         assert agent.agent_id == "test-agent"
@@ -85,8 +85,8 @@ class TestMultiProtocolAgent:
 
     def test_add_protocol(self):
         """Test adding protocols to agent."""
-        from agentic_dspy.agents.multi_protocol_agent import MultiProtocolAgent
-        from agentic_dspy.protocols.mcp.client import MCPClient
+        from agenspy.agents.multi_protocol_agent import MultiProtocolAgent
+        from agenspy.protocols.mcp.client import MCPClient
 
         agent = MultiProtocolAgent("test-agent")
         mcp_client = MCPClient("mcp://test-server:8080")
@@ -96,8 +96,8 @@ class TestMultiProtocolAgent:
 
     def test_protocol_routing(self):
         """Test protocol routing."""
-        from agentic_dspy.agents.multi_protocol_agent import MultiProtocolAgent
-        from agentic_dspy.protocols.mcp.client import MCPClient
+        from agenspy.agents.multi_protocol_agent import MultiProtocolAgent
+        from agenspy.protocols.mcp.client import MCPClient
 
         agent = MultiProtocolAgent("test-agent")
         mcp_client = MCPClient("mcp://test-server:8080")

@@ -126,7 +126,7 @@ def protocol_info(protocol_name):
         click.echo("  - Error handling")
         click.echo()
         click.echo("Usage:")
-        click.echo("  adspy agent run --agent github-pr-review 'Analyze PR <url>'")
+        click.echo("  agenspy agent run --agent github-pr-review 'Analyze PR <url>'")
 
     elif protocol_name.lower() == "a2a":
         click.echo("Agent2Agent Protocol")
@@ -138,6 +138,6 @@ def protocol_info(protocol_name):
         click.echo("  - Broadcast capabilities")
         click.echo()
         click.echo("Usage:")
-        click.echo("  adspy protocol test a2a --server tcp://localhost:9090")
+        click.echo("  agenspy protocol test a2a --server tcp://localhost:9090")
     else:
         click.echo(f"❌ Unknown protocol: {protocol_name}")

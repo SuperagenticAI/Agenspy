@@ -36,4 +36,4 @@ jobs:
 
       - name: Run tests with pytest
         run: |
-          pytest --cov=agentic_dspy --cov-report=xml tests/
+          pytest --cov=agenspy --cov-report=xml tests/

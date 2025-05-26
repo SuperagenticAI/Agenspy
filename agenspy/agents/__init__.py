@@ -1,4 +1,4 @@
-"""Agent implementations for Agentic-DSPy."""
+"""Agent implementations for Agenspy."""
 
 from .base_agent import BaseAgent
 from .github_agent import GitHubPRReviewAgent

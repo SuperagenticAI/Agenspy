@@ -1,4 +1,4 @@
-# Contributing to Agentic-DSPy
+# Contributing to Agenspy
 
 👍 First off, thanks for taking the time to contribute! 🎉
 
@@ -21,8 +21,8 @@ This project and everyone participating in it are governed by our [Code of Condu
 1. **Fork the repository**
 2. **Clone your fork**:
    ```bash
-   git clone https://github.com/superagenticai/agentic-dspy.git
-   cd agentic-dspy
+   git clone https://github.com/superagenticai/agenspy.git
+   cd agenspy
    ```
 
 3. **Set up your development environment**:
@@ -41,7 +41,7 @@ This project and everyone participating in it are governed by our [Code of Condu
 
 4. **Verify your setup**:
    ```bash
-   adspy --help
+   agenspy --help
    ```
 
 ## Development Process
@@ -121,7 +121,7 @@ Additional guidelines:
 
 ## CLI Development
 
-Agentic-DSPy includes a CLI tool called `adspy`. When making changes to the CLI:
+Agenspy includes a CLI tool called `agenspy`. When making changes to the CLI:
 
 - Keep commands and options consistent with existing patterns
 - Add comprehensive help text for all commands
@@ -164,9 +164,9 @@ def process_agent(self, input_data: Dict[str, Any]) -> AgentResponse:
 ## Getting Help
 
 - Open an issue for bugs or feature requests
-- Check our [documentation](https://agentic-dspy.readthedocs.io)
+- Check our [documentation](https://agenspy.readthedocs.io)
 - Join our community discussions
 
 ## License
 
-By contributing to Agentic-DSPy, you agree that your contributions will be licensed under the MIT License.
+By contributing to Agenspy, you agree that your contributions will be licensed under the MIT License.

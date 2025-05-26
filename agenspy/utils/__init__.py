@@ -1,4 +1,4 @@
-"""Utility modules for Agentic-DSPy."""
+"""Utility modules for Agenspy."""
 
 from .protocol_registry import ProtocolRegistry, registry
 from .server_manager import ServerManager, server_manager

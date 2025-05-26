@@ -21,7 +21,7 @@ def system_status(ctx):
     """Show overall system status."""
     verbose = ctx.obj.get("verbose", False)
 
-    click.echo("🔍 Agentic-DSPy System Status")
+    click.echo("🔍 Agenspy System Status")
     click.echo("=" * 40)
 
     # Python version

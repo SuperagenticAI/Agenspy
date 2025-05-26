@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Main CLI entry point for adspy."""
+"""Main CLI entry point for agenspy."""
 
 import os
 import sys
@@ -16,18 +16,18 @@ from .commands.server import server_group
 
 
 @click.group()
-@click.version_option(version="0.1.0", prog_name="adspy")
+@click.version_option(version="0.1.0", prog_name="agenspy")
 @click.option("--verbose", "-v", is_flag=True, help="Enable verbose output")
 @click.option("--config", "-c", help="Path to configuration file")
 @click.pass_context
 def cli(ctx, verbose, config):
-    """Agentic-DSPy CLI - Protocol-first AI agent framework."""
+    """Agenspy CLI - Protocol-first AI agent framework."""
     ctx.ensure_object(dict)
     ctx.obj["verbose"] = verbose
     ctx.obj["config"] = config
 
     if verbose:
-        click.echo("🚀 Agentic-DSPy CLI v0.1.0")
+        click.echo("🚀 Agenspy CLI v0.1.0")
 
 
 # Add command groups

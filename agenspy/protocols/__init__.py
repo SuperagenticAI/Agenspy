@@ -1,4 +1,4 @@
-"""Protocol implementations for Agentic-DSPy."""
+"""Protocol implementations for Agenspy."""
 
 from .agent2agent.client import Agent2AgentClient
 from .base import BaseProtocol, ProtocolType

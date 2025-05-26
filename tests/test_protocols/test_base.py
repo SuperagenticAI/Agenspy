@@ -3,7 +3,7 @@
 import dspy
 import pytest
 
-from agentic_dspy.protocols.base import BaseProtocol, ProtocolType
+from agenspy.protocols.base import BaseProtocol, ProtocolType
 
 
 class MockProtocol(BaseProtocol):

@@ -77,7 +77,7 @@ def run_agent(ctx, task, agent, mcp_server, github_token, real_mcp):
         class DummyLM:
             def __call__(self, *args, **kwargs):
                 return dspy.Prediction(
-                    review_comment="Task completed successfully using Agentic-DSPy CLI",
+                    review_comment="Task completed successfully using Agenspy CLI",
                     approval_status="Completed",
                     analysis="CLI-based analysis completed",
                 )

@@ -1,4 +1,4 @@
-"""Base agent class for Agentic-DSPy."""
+"""Base agent class for Agenspy."""
 
 from abc import abstractmethod
 from typing import Any, Dict, List, Optional
@@ -9,7 +9,7 @@ from ..protocols.base import BaseProtocol
 
 
 class BaseAgent(dspy.Module):
-    """Base class for all agents in Agentic-DSPy."""
+    """Base class for all agents in Agenspy."""
 
     def __init__(self, agent_id: str, **kwargs):
         super().__init__(**kwargs)

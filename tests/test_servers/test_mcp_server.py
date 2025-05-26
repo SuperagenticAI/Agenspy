@@ -3,7 +3,7 @@
 
 import pytest
 
-from agentic_dspy.servers.mcp_python_server import GitHubMCPServer, PythonMCPServer
+from agenspy.servers.mcp_python_server import GitHubMCPServer, PythonMCPServer
 
 
 class TestPythonMCPServer:

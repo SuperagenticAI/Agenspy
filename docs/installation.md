@@ -1,17 +1,17 @@
-# Installation Guide  
-  
-## Prerequisites  
-  
-- Python 3.9 or higher  
-- Node.js (for real MCP servers)  
-- Git  
-  
-## Basic Installation  
-  
-Install Agentic-DSPy from PyPI:  
-  
-```bash  
-pip install agentic-dspy
+# Installation Guide
+
+## Prerequisites
+
+- Python 3.9 or higher
+- Node.js (for real MCP servers)
+- Git
+
+## Basic Installation
+
+Install Agenspy from PyPI:
+
+```bash
+pip install agenspy
 ```
 
 ## Optional Dependencies
@@ -21,14 +21,14 @@ pip install agentic-dspy
 For real MCP server integration:
 
 ```bash
-pip install agentic-dspy[mcp]
+pip install agenspy[mcp]
 ```
 
 ### Development Tools
 For contributing to the project:
 
 ```bash
-pip install agentic-dspy[dev]
+pip install agenspy[dev]
 ```
 
 All Examples
@@ -38,7 +38,7 @@ All Examples
 To run all examples:
 
 ```bash
-pip install agentic-dspy[examples]
+pip install agenspy[examples]
 ```
 
 Development Installation
@@ -46,9 +46,7 @@ Development Installation
 For development, clone the repository and install in editable mode:
 
 ```bash
-git clone https://github.com/superagenticai/agentic-dspy.git  
-cd agentic-dspy  
+git clone https://github.com/superagenticai/agenspy.git
+cd agenspy
 pip install -e .[dev]
 ```
-
-

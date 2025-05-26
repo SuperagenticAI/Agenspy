@@ -3,7 +3,7 @@ requires = ["setuptools>=40.8.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "agentic-dspy"
+name = "agenspy"
 version = "0.1.0"
 description = "Protocol-first AI agent framework built on DSPy - supporting MCP, Agent2Agent, and future protocols"
 readme = "README.md"
@@ -40,17 +40,17 @@ examples = ["openai>=1.0.0", "requests>=2.31.0"]
 servers = ["fastapi>=0.100.0", "uvicorn>=0.20.0"]
 
 [project.urls]
-homepage = "https://github.com/superagenticai/agentic-dspy"
-repository = "https://github.com/superagenticai/agentic-dspy"
-documentation = "https://agentic-dspy.readthedocs.io"
+homepage = "https://github.com/superagenticai/agenspy"
+repository = "https://github.com/superagenticai/agenspy"
+documentation = "https://agenspy.readthedocs.io"
 
 [project.scripts]
-adspy = "agentic_dspy.cli.main:main"
+agenspy = "agenspy.cli.main:main"
 
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["agentic_dspy*"]
+include = ["agenspy*"]
 exclude = ["tests*"]
 
 [tool.ruff]
@@ -76,4 +76,4 @@ ignore = ["E501", "E701", "E702", "F841", "F821", "B904", "E402"]
 "__init__.py" = ["F401"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["agentic_dspy"]
+known-first-party = ["agenspy"]

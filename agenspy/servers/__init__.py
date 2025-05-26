@@ -1,4 +1,4 @@
-"""Server implementations for Agentic-DSPy."""
+"""Server implementations for Agenspy."""
 
 from .mcp_python_server import GitHubMCPServer, PythonMCPServer
 

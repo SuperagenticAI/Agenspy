@@ -2,8 +2,8 @@
 
 import pytest
 
-from agentic_dspy.protocols.mcp.client import MCPClient, RealMCPClient
-from agentic_dspy.protocols.mcp.session import MockMCPSession
+from agenspy.protocols.mcp.client import MCPClient, RealMCPClient
+from agenspy.protocols.mcp.session import MockMCPSession
 
 
 class TestMCPClient:

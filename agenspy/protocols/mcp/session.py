@@ -1,4 +1,4 @@
-"""MCP Session management for Agentic-DSPy."""
+"""MCP Session management for Agenspy."""
 
 import subprocess
 import time

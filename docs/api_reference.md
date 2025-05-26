@@ -33,12 +33,12 @@ class MultiProtocolAgent(dspy.Module):
 
 ### Utility Functions
 
-create_mcp_agent
+create_mcp_pr_review_agent
 Convenience function to create MCP agents.
 
 ```python
 
-def create_mcp_agent(server_url: str, **kwargs) -> GitHubPRReviewAgent
+def create_mcp_pr_review_agent(server_url: str, **kwargs) -> GitHubPRReviewAgent
 # create_multi_protocol_agent
 # Convenience function to create multi-protocol agents.
 
@@ -50,7 +50,7 @@ def create_multi_protocol_agent(agent_id: str = "multi-agent") -> MultiProtocolA
 Global registry for managing protocol implementations.
 
 ```python
-from agentic_dspy.utils import registry
+from agenspy.utils import registry
 
 # Register a protocol
 registry.register_protocol(ProtocolType.CUSTOM, MyProtocol)

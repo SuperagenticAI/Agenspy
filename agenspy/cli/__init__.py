@@ -1,4 +1,4 @@
-"""CLI module for Agentic-DSPy."""
+"""CLI module for Agenspy."""
 
 from .main import main
 

@@ -23,7 +23,7 @@ A clear and concise description of what actually happened.
 ## 🖥️ Environment
 - Operating System: [e.g. macOS 14.1]
 - Python Version: [e.g. 3.11.4]
-- Agentic-DSPy Version: [e.g. 1.0.0]
+- Agenspy Version: [e.g. 1.0.0]
 - Installation Method: [e.g. pip, source]
 - Virtual Environment: [e.g. venv, conda]
 

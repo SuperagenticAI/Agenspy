@@ -1,4 +1,4 @@
-"""Base protocol interface for Agentic-DSPy."""
+"""Base protocol interface for Agenspy."""
 
 from abc import abstractmethod
 from enum import Enum

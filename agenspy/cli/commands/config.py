@@ -16,7 +16,7 @@ def config_group():
 @click.option("--force", is_flag=True, help="Overwrite existing configuration")
 def init_config(force):
     """Initialize configuration file."""
-    config_path = Path.home() / ".adspy" / "config.json"
+    config_path = Path.home() / ".agenspy" / "config.json"
 
     if config_path.exists() and not force:
         click.echo("❌ Configuration already exists. Use --force to overwrite.")
@@ -43,10 +43,10 @@ def init_config(force):
 @config_group.command("show")
 def show_config():
     """Show current configuration."""
-    config_path = Path.home() / ".adspy" / "config.json"
+    config_path = Path.home() / ".agenspy" / "config.json"
 
     if not config_path.exists():
-        click.echo("❌ No configuration found. Run 'adspy config init' first.")
+        click.echo("❌ No configuration found. Run 'agenspy config init' first.")
         return
 
     with open(config_path, "r") as f:
@@ -61,10 +61,10 @@ def show_config():
 @click.argument("value")
 def set_config(key, value):
     """Set a configuration value."""
-    config_path = Path.home() / ".adspy" / "config.json"
+    config_path = Path.home() / ".agenspy" / "config.json"
 
     if not config_path.exists():
-        click.echo("❌ No configuration found. Run 'adspy config init' first.")
+        click.echo("❌ No configuration found. Run 'agenspy config init' first.")
         return
 
     with open(config_path, "r") as f:
@@ -96,10 +96,10 @@ def set_config(key, value):
 @click.argument("key")
 def get_config(key):
     """Get a configuration value."""
-    config_path = Path.home() / ".adspy" / "config.json"
+    config_path = Path.home() / ".agenspy" / "config.json"
 
     if not config_path.exists():
-        click.echo("❌ No configuration found. Run 'adspy config init' first.")
+        click.echo("❌ No configuration found. Run 'agenspy config init' first.")
         return
 
     with open(config_path, "r") as f:

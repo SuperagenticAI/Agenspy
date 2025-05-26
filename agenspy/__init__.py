@@ -1,4 +1,4 @@
-"""Agentic-DSPy: Protocol-first AI agent framework built on DSPy."""
+"""Agenspy: Protocol-first AI agent framework built on DSPy."""
 
 from .agents.base_agent import BaseAgent
 from .agents.github_agent import GitHubPRReviewAgent
@@ -11,7 +11,7 @@ from .utils.protocol_registry import ProtocolRegistry, registry
 from .utils.server_manager import ServerManager, server_manager
 
 __version__ = "0.1.0"
-__author__ = "Agentic-DSPy Contributors"
+__author__ = "Agenspy Contributors"
 __description__ = "Protocol-first AI agent framework built on DSPy"
 
 __all__ = [
@@ -36,7 +36,7 @@ __all__ = [
 ]
 
 
-def create_mcp_agent(server_url: str, **kwargs):
+def create_mcp_pr_review_agent(server_url: str, **kwargs):
     """Convenience function to create MCP agent."""
     return GitHubPRReviewAgent(server_url, **kwargs)
 

@@ -1,12 +1,12 @@
-# Agentic-DSPy 🚀
+# Agenspy (Agentic DSPy) 🚀
 
-[![PyPI Version](https://img.shields.io/pypi/v/agentic-dspy.svg)](https://pypi.org/project/agentic-dspy/)
-[![Python Version](https://img.shields.io/pypi/pyversions/agentic-dspy.svg)](https://pypi.org/project/agentic-dspy/)
+[![PyPI Version](https://img.shields.io/pypi/v/agenspy.svg)](https://pypi.org/project/agenspy/)
+[![Python Version](https://img.shields.io/pypi/pyversions/agenspy.svg)](https://pypi.org/project/agenspy/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
-**Agentic-DSPy** is a protocol-first AI agent framework built on top of DSPy, designed to create sophisticated, production-ready AI agents with support for multiple communication protocols including MCP (Model Context Protocol) and Agent2Agent.
+**Agenspy** (Agentic DSPy) is a protocol-first AI agent framework built on top of DSPy, designed to create sophisticated, production-ready AI agents with support for multiple communication protocols including MCP (Model Context Protocol) and Agent2Agent.
 
 ## 🌟 Features
 
@@ -21,18 +21,18 @@
 
 ### Basic Installation
 ```bash
-pip install agentic-dspy
+pip install agenspy
 ```
 
 ### With MCP Support
 ```bash
-pip install "agentic-dspy[mcp]"
+pip install "agenspy[mcp]"
 ```
 
 ### Development Installation
 ```bash
-git clone https://github.com/Shashikant86/Agentic-DSPy.git
-cd Agentic-DSPy
+git clone https://github.com/superagenticai/Agenspy.git
+cd Agenspy
 pip install -e ".[dev]"
 ```
 
@@ -42,14 +42,14 @@ pip install -e ".[dev]"
 
 ```python
 import dspy
-from agentic_dspy import create_mcp_agent
+from agenspy import create_mcp_pr_review_agent
 
 # Configure DSPy with your preferred language model
 lm = dspy.LM('openai/gpt-4o-mini')
 dspy.configure(lm=lm)
 
 # Create an MCP agent
-agent = create_mcp_agent("mcp://github-server:8080")
+agent = create_mcp_pr_review_agent("mcp://github-server:8080")
 
 # Use the agent to review a pull request
 result = agent(
@@ -64,7 +64,7 @@ print(f"Status: {result.approval_status}")
 ### Multi-Protocol Agent (Experimental)
 
 ```python
-from agentic_dspy import MultiProtocolAgent, MCPClient, Agent2AgentClient
+from agenspy import MultiProtocolAgent, MCPClient, Agent2AgentClient
 
 # Create a multi-protocol agent
 agent = MultiProtocolAgent("my-agent")
@@ -83,7 +83,7 @@ result = agent("Analyze this repository for security issues")
 ### Custom Agent with Tools
 
 ```python
-from agentic_dspy import BaseAgent
+from agenspy import BaseAgent
 from typing import Dict, Any
 
 class CodeReviewAgent(BaseAgent):
@@ -107,7 +107,7 @@ result = await agent.review_code("def add(a, b): return a + b", "python")
 
 # 🏗️ Architecture
 
-Agentic-DSPy provides a protocol-first approach to building AI agents:
+Agenspy provides a protocol-first approach to building AI agents:
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
@@ -140,7 +140,7 @@ Agentic-DSPy provides a protocol-first approach to building AI agents:
 ### Advanced Usage Example: Custom MCP Server
 
 ```python
-from agentic_dspy.servers import BaseMCPServer
+from agenspy.servers import BaseMCPServer
 import asyncio
 
 class CustomMCPServer(BaseMCPServer):
@@ -160,39 +160,39 @@ server.start()
 
 ## 🖥️ Command Line Interface
 
-Agentic-DSPy provides a command-line interface for managing agents and protocols:
+Agenspy provides a command-line interface for managing agents and protocols:
 
 ### Basic Commands
 ```bash
 # Show help and available commands
-adspy --help
+agenspy --help
 
 # Show version information
-adspy --version
+agenspy --version
 ```
 
 ### Agent Management
 ```bash
 # List available agents
-adspy agent --help
+agenspy agent --help
 ```
 
 ### Protocol Management
 ```bash
 # List available protocols
-adspy protocol --help
+agenspy protocol --help
 
 # Test protocol connection
-adspy protocol test [PROTOCOL] [--server SERVER]
+agenspy protocol test [PROTOCOL] [--server SERVER]
 
 # Get detailed information about a protocol
-adspy protocol info [PROTOCOL_NAME]
+agenspy protocol info [PROTOCOL_NAME]
 ```
 
 ### Server Management
 ```bash
 # Start the server
-adspy server --help
+agenspy server --help
 ```
 
 ## 📚 Documentation
@@ -238,11 +238,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [DSPy Documentation](https://dspy.ai/)
 - [Model Context Protocol](https://modelcontextprotocol.io/)
 - [Agent2Agent Protocol](https://google.github.io/A2A/)
-- [GitHub Repository](https://github.com/Shashikant86/Agentic-DSPy)
+- [GitHub Repository](https://github.com/superagenticai/Agenspy)
 
 ## 📬 Contact
 
-For questions and support, please open an issue on our [GitHub repository](https://github.com/Shashikant86/Agentic-DSPy/issues).
+For questions and support, please open an issue on our [GitHub repository](https://github.com/superagenticai/Agenspy/issues).
 
 ## 🙏 Acknowledgments
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Setup script for Agentic-DSPy."""
+"""Setup script for Agenspy."""
 
 from setuptools import find_packages, setup
 
@@ -20,14 +20,14 @@ install_requires = [
 ]
 
 setup(
-    name="agentic-dspy",
+    name="agenspy",
     version="0.1.0",
-    author="Agentic-DSPy Contributors",
+    author="Agenspy Contributors",
     author_email="shashikant@super-agentic.ai",
     description="Protocol-first AI agent framework built on DSPy",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/superagenticai/agentic-dspy",
+    url="https://github.com/superagenticai/agenspy",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -48,7 +48,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "adspy = agentic_dspy.cli.main:main",
+            "agenspy = agenspy.cli.main:main",
         ],
     },
 )

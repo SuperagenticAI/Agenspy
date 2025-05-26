@@ -1,4 +1,4 @@
-"""MCP Client implementation for Agentic-DSPy."""
+"""MCP Client implementation for Agenspy."""
 
 from typing import Any, Dict, List
 
