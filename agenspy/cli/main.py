@@ -13,6 +13,8 @@ from .commands.agent import agent_group
 from .commands.config import config_group
 from .commands.protocols import protocol_group
 from .commands.server import server_group
+from .commands.demo import demo_group
+from .commands.workflow import workflow_group
 
 
 @click.group()
@@ -35,6 +37,8 @@ cli.add_command(agent_group)
 cli.add_command(protocol_group)
 cli.add_command(server_group)
 cli.add_command(config_group)
+cli.add_command(demo_group, name="demo")
+cli.add_command(workflow_group, name="workflow")
 
 
 def main():

@@ -114,8 +114,8 @@ def demo_real_mcp_with_retry(github_token):
 
             # Test with a real repository
             test_repos = [
-                "https://github.com/microsoft/vscode/pull/200000",  # Likely to exist
-                "https://github.com/facebook/react/pull/25000",    # Fallback
+                "https://github.com/stanfordnlp/dspy/pull/8242",  # Likely to exist
+                "https://github.com/stanfordnlp/dspy/pull/8277",    # Fallback
                 "https://github.com/example/test-repo/pull/1"      # Mock fallback
             ]
 
@@ -166,7 +166,7 @@ def demo_mock_mcp():
 
     # Review a PR
     result = agent(
-        pr_url="https://github.com/example/awesome-project/pull/42",
+        pr_url="https://github.com/stanfordnlp/dspy/pull/8277",
         review_focus="security"
     )
 

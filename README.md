@@ -249,12 +249,11 @@ agenspy agent run "Review PR https://github.com/stanfordnlp/dspy/pull/8277" --re
 agenspy protocol test mcp   
 ```
 
-- Manage Servers:
+- Run example:
 
 ```bash
-agenspy server --help
+agenspy demo github-pr
 ```
-
 
 
 ## 📚 Documentation
@@ -271,6 +270,7 @@ pytest tests/
 ## 📚 Examples
 
 See the examples/ directory for complete examples:
+Get your OpenAI API key OPENAI_API_KEY from [here](https://platform.openai.com/api-keys) and optionally GITHUB_TOKEN from [here](https://github.com/settings/tokens) and set as ENV variables. You might also need to install nodejs and npm to run the nodejs server.
 
 - `basic_mcp_demo.py` - Simple MCP agent
 - `comprehensive_mcp_demo.py` - Comprehensive MCP agent
@@ -278,28 +278,16 @@ See the examples/ directory for complete examples:
 - `multi_protocol_demo.py` - Multi-protocol agent (Experimental Mock)
 - `python_server_demo.py` - Python MCP server
 
+Run the examples with:
 
+```bash
+agenspy demo github-pr
+```
+Or Run manually using Python:
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on how to contribute to the project.
-
-
-## 🚀 Future Roadmap
-
-The end goal is to merge this tool in the dspy main repo and make it a first-class citizen of the DSPy ecosystem. However, if it doesn't fit there then it can be used independently as a protocol-first AI agent framework. Here are some food for thought for future work:
-
-- **Protocol Layer**: WebSocket and gRPC support for real-time, high-performance agent communication
-- **Agent Framework**: Enhanced orchestration, state management, and network discovery
-- **Production Readiness**: Monitoring, load balancing, and fault tolerance features
-- **Developer Tools**: Improved CLI, web dashboard, and debugging utilities
-- **Ecosystem**: Cloud integrations and database adapters for popular services
-
-Interested in contributing? Check out our [open issues](https://github.com/superagenticai/Agenspy/issues) or start a discussion about new features!
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```bash
+python examples/github_pr_review.py
+```
 
 ## 🔗 Resources
 
@@ -307,6 +295,36 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Model Context Protocol](https://modelcontextprotocol.io/)
 - [Agent2Agent Protocol](https://google.github.io/A2A/)
 - [GitHub Repository](https://github.com/superagenticai/Agenspy)
+
+
+## 🚀 Future Roadmap
+
+### Merge into DSPy
+
+The end goal is to merge this tool in the dspy main repo and make it a first-class citizen of the DSPy ecosystem. However, if it doesn't fit there then it can be used independently as a protocol-first AI agent framework. 
+
+### Get DSPy Listed in Google A2A Agent Directory
+
+Implementations of A2A and Get DSPy Listed in A2A Agent Directory (here)[https://github.com/google/A2A/blob/main/samples/python/agents/README.md] by building DSPy agents that utilize the A2A protocol.
+
+### Future Work
+
+Alternately, Agenspy can be developed independently as a protocol-first AI agent framework. Here are some food for thought for future work:
+
+- **Protocol Layer**: WebSocket and gRPC support for real-time, high-performance agent communication
+- **Agent Framework**: Enhanced orchestration, state management, and network discovery
+- **Production Readiness**: Monitoring, load balancing, and fault tolerance features
+- **Developer Tools**: Improved CLI, web dashboard, and debugging utilities
+- **Ecosystem**: Cloud integrations and database adapters for popular services
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on how to contribute to the project.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 ## 📬 Contact
 
