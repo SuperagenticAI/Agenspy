@@ -83,14 +83,15 @@ result = agent("Analyze this repository for security issues")
 ### Custom Agent with Tools
 
 ```python
+import asyncio
+import dspy
 from agenspy import BaseAgent
 from typing import Dict, Any
 
 class CodeReviewAgent(BaseAgent):
     def __init__(self, name: str):
         super().__init__(name)
-        self.register_tool("review_code", self.review_code)
-
+        
     async def review_code(self, code: str, language: str) -> Dict[str, Any]:
         """Review code for potential issues."""
         # Your custom review logic here
@@ -99,10 +100,52 @@ class CodeReviewAgent(BaseAgent):
             "issues": ["Consider adding error handling", "Document this function"],
             "suggestions": ["Use list comprehension for better performance"]
         }
+    
+    async def forward(self, **kwargs) -> dspy.Prediction:
+        """Process agent request."""
+        code = kwargs.get("code", "")
+        language = kwargs.get("language", "python")
+        result = await self.review_code(code, language)
+        return dspy.Prediction(**result)
 
-# Usage
-agent = CodeReviewAgent("code-reviewer")
-result = await agent.review_code("def add(a, b): return a + b", "python")
+async def main():
+    # Configure DSPy with your preferred language model
+    lm = dspy.LM('openai/gpt-4o-mini')
+    dspy.configure(lm=lm)
+    
+    # Create and use the agent
+    agent = CodeReviewAgent("code-reviewer")
+    result = await agent(code="def add(a, b): return a + b", language="python")
+    print("Review Results:", result)
+
+# Run the async main function
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+
+### Python MCP Server
+
+```python
+
+from agentic_dspy.servers import GitHubMCPServer  
+  
+# Create and start Python MCP server  [header-11](#header-11)
+server = GitHubMCPServer(port=8080)  
+  
+# Add custom tools  [header-12](#header-12)
+async def custom_tool(param: str):  
+    return f"Processed: {param}"  
+  
+server.register_tool(  
+    "custom_tool",  
+    "A custom tool",  
+    {"param": "string"},  
+    custom_tool  
+)  
+  
+server.start()
+
 ```
 
 # 🏗️ Architecture
@@ -140,59 +183,46 @@ Agenspy provides a protocol-first approach to building AI agents:
 ### Advanced Usage Example: Custom MCP Server
 
 ```python
-from agenspy.servers import BaseMCPServer
+from agenspy.servers.mcp_python_server import PythonMCPServer
 import asyncio
 
-class CustomMCPServer(BaseMCPServer):
+class CustomMCPServer(PythonMCPServer):
     def __init__(self, port: int = 8080):
-        super().__init__(port=port)
-        self.register_tool("custom_operation", self.handle_custom_op)
+        super().__init__(name="custom-mcp-server", port=port)
+        self.register_tool(
+            name="custom_operation",
+            description="A custom operation that processes parameters",
+            parameters={
+                "type": "object",
+                "properties": {
+                    "param1": {"type": "string", "description": "First parameter"},
+                    "param2": {"type": "integer", "description": "Second parameter"}
+                },
+                "required": ["param1", "param2"]
+            },
+            handler=self.handle_custom_op
+        )
 
-    async def handle_custom_op(self, param1: str, param2: int) -> dict:
+    async def handle_custom_op(self, **kwargs):
         """Handle custom operation with parameters."""
-        return {"result": f"Processed {param1} with {param2}"}
+        param1 = kwargs.get("param1")
+        param2 = kwargs.get("param2")
+        return f"Processed {param1} with {param2}"
 
 # Start the server
-server = CustomMCPServer(port=8080)
-print("Starting MCP server on port 8080...")
-server.start()
+if __name__ == "__main__":
+    server = CustomMCPServer(port=8080)
+    print("Starting MCP server on port 8080...")
+    server.start()
 ```
 
 ## 🖥️ Command Line Interface
 
 Agenspy provides a command-line interface for managing agents and protocols:
 
-### Basic Commands
 ```bash
 # Show help and available commands
 agenspy --help
-
-# Show version information
-agenspy --version
-```
-
-### Agent Management
-```bash
-# List available agents
-agenspy agent --help
-```
-
-### Protocol Management
-```bash
-# List available protocols
-agenspy protocol --help
-
-# Test protocol connection
-agenspy protocol test [PROTOCOL] [--server SERVER]
-
-# Get detailed information about a protocol
-agenspy protocol info [PROTOCOL_NAME]
-```
-
-### Server Management
-```bash
-# Start the server
-agenspy server --help
 ```
 
 ## 📚 Documentation

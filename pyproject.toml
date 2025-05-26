@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "agenspy"
-version = "0.1.0"
-description = "Protocol-first AI agent framework built on DSPy - supporting MCP, Agent2Agent, and future protocols"
+version = "0.0.1"
+description = "Agenspy (Agentic-DSPy)- Protocol-first AI agent framework built on DSPy - supporting MCP, Agent2Agent, and future protocols"
 readme = "README.md"
 authors = [{ name = "Shashi Jagtap", email = "shashi@super-agentic.ai" }]
 license = { text = "MIT License" }

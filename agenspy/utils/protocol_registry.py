@@ -15,7 +15,6 @@ class ProtocolRegistry:
     def register_protocol(self, protocol_type: ProtocolType, protocol_class: Type[BaseProtocol]):
         """Register a protocol implementation."""
         self._protocols[protocol_type] = protocol_class
-        print(f"📝 Registered {protocol_type.value} protocol")
 
     def create_protocol(self, protocol_type: ProtocolType, **kwargs) -> BaseProtocol:
         """Create a protocol instance."""

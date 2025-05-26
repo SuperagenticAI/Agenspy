@@ -21,10 +21,10 @@ install_requires = [
 
 setup(
     name="agenspy",
-    version="0.1.0",
-    author="Agenspy Contributors",
-    author_email="shashikant@super-agentic.ai",
-    description="Protocol-first AI agent framework built on DSPy",
+    version="0.0.1",
+    author="Shashi Jagtap",
+    author_email="shashi@super-agentic.ai",
+    description="Agenspy (Agentic-DSPy)- Protocol-first AI agent framework built on DSPy",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/superagenticai/agenspy",
