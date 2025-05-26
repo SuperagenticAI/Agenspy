@@ -16,7 +16,7 @@ from .commands.server import server_group
 
 
 @click.group()
-@click.version_option(version="0.1.0", prog_name="agenspy")
+@click.version_option(version="0.0.1", prog_name="agenspy")
 @click.option("--verbose", "-v", is_flag=True, help="Enable verbose output")
 @click.option("--config", "-c", help="Path to configuration file")
 @click.pass_context
@@ -27,7 +27,7 @@ def cli(ctx, verbose, config):
     ctx.obj["config"] = config
 
     if verbose:
-        click.echo("🚀 Agenspy CLI v0.1.0")
+        click.echo("🚀 Agenspy CLI v0.0.1")
 
 
 # Add command groups

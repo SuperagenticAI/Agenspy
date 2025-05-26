@@ -137,10 +137,10 @@ Launch a Python MCP server with custom tools:
 
 from agentic_dspy.servers import GitHubMCPServer  
   
-# Create and start Python MCP server  [header-11](#header-11)
+# Create and start Python MCP server 
 server = GitHubMCPServer(port=8080)  
   
-# Add custom tools  [header-12](#header-12)
+# Add custom tools 
 async def custom_tool(param: str):  
     return f"Processed: {param}"  
   
@@ -235,9 +235,31 @@ Agenspy provides a command-line interface for managing agents and protocols:
 agenspy --help
 ```
 
+### Some Useful CLI Commands
+
+- Run agent PR Review Agent using Real MCP server:
+
+```bash
+agenspy agent run "Review PR https://github.com/stanfordnlp/dspy/pull/8277" --real-mcp
+```
+
+- Test protocol server:
+
+```bash
+agenspy protocol test mcp   
+```
+
+- Manage Servers:
+
+```bash
+agenspy server --help
+```
+
+
+
 ## 📚 Documentation
 
-For detailed documentation, including API reference, examples, and advanced usage, please visit our [documentation site](TBC).
+For detailed documentation, including API reference, examples, and advanced usage, please visit our [documentation site](TBC). (coming soon)
 
 ## 🧪 Testing
 
@@ -261,6 +283,19 @@ See the examples/ directory for complete examples:
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on how to contribute to the project.
+
+
+## 🚀 Future Roadmap
+
+The end goal is to merge this tool in the dspy main repo and make it a first-class citizen of the DSPy ecosystem. However, if it doesn't fit there then it can be used independently as a protocol-first AI agent framework. Here are some food for thought for future work:
+
+- **Protocol Layer**: WebSocket and gRPC support for real-time, high-performance agent communication
+- **Agent Framework**: Enhanced orchestration, state management, and network discovery
+- **Production Readiness**: Monitoring, load balancing, and fault tolerance features
+- **Developer Tools**: Improved CLI, web dashboard, and debugging utilities
+- **Ecosystem**: Cloud integrations and database adapters for popular services
+
+Interested in contributing? Check out our [open issues](https://github.com/superagenticai/Agenspy/issues) or start a discussion about new features!
 
 ## 📄 License
 

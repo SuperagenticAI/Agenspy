@@ -103,7 +103,7 @@ class PythonMCPServer:
         """Handle MCP initialization."""
         return {
             "protocol_version": "1.0",
-            "server_info": {"name": self.name, "version": "0.1.0"},
+            "server_info": {"name": self.name, "version": "0.0.1"},
             "capabilities": {"tools": True, "context": True},
         }
 

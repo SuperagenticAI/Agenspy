@@ -10,7 +10,7 @@ from .servers.mcp_python_server import GitHubMCPServer, PythonMCPServer
 from .utils.protocol_registry import ProtocolRegistry, registry
 from .utils.server_manager import ServerManager, server_manager
 
-__version__ = "0.1.0"
+__version__ = "0.0.1"
 __author__ = "Agenspy Contributors"
 __description__ = "Protocol-first AI agent framework built on DSPy"
 
