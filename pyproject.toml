@@ -7,7 +7,7 @@ name = "agentic-dspy"
 version = "0.1.0"  
 description = "Protocol-first AI agent framework built on DSPy - supporting MCP, Agent2Agent, and future protocols"  
 readme = "README.md"  
-authors = [{ name = "Shashi Jagtap", email = "shashi@super-agentic-ai" }]  
+authors = [{ name = "Shashi Jagtap", email = "shashi@super-agentic.ai" }]  
 license = { text = "MIT License" }  
 requires-python = ">=3.9"  
 classifiers = [  

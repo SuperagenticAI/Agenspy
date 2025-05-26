@@ -29,7 +29,7 @@ def main():
       
     # Test the agent  
     result = agent(  
-        pr_url="https://github.com/example/repo/pull/1",  
+        pr_url="https://github.com/stanfordnlp/dspy/pull/8270",  
         review_focus="code_quality"  
     )  
       
