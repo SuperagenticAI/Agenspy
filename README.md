@@ -2,9 +2,11 @@
 
 [![PyPI Version](https://img.shields.io/pypi/v/agenspy.svg)](https://pypi.org/project/agenspy/)
 [![Python Version](https://img.shields.io/pypi/pyversions/agenspy.svg)](https://pypi.org/project/agenspy/)
+[![Documentation](https://img.shields.io/badge/Documentation-orange)](https://super-agentic.ai/agenspy)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 **Agenspy** (Agentic DSPy) is a protocol-first AI agent framework built on top of DSPy, designed to create sophisticated, production-ready AI agents with support for multiple communication protocols including MCP (Model Context Protocol) and Agent2Agent.
 
@@ -16,6 +18,11 @@
 - **Comprehensive CLI**: Full-featured command-line interface for managing agents and workflows
 - **Python & JavaScript Servers**: Support for both Python and Node.js MCP servers
 - **Automatic Connection Management**: Protocol-level session and capability handling
+
+## 🤔 Motivation
+
+All other agent frameworks are using the MCP as integraed client servers. They are using both both tool-first and protocol first approach but DSPy was still using tool-first approach. All the MCP tools needs to converted into DSPy.Tools. Also DSPy Agents are not in the list o Google's A2A Agent Directory [here](https://github.com/google/A2A/blob/main/samples/python/agents/README.md). So filed Enhancemnt Proposal on DSPy Github repo [here](https://github.com/stanfordnlp/dspy/issues/8273) and Agenspy born to demonstrate how DSPy can use protocol first approach for building agents those are ready for next generaton of protocols. 
+
 
 ## 📦 Installation
 
@@ -258,7 +265,7 @@ agenspy demo github-pr
 
 ## 📚 Documentation
 
-For detailed documentation, including API reference, examples, and advanced usage, please visit our [documentation site](TBC). (coming soon)
+For detailed documentation, including API reference, examples, and advanced usage, we need to wait but for now please visit our [website](https://super-agentic.ai/agenspy).
 
 ## 🧪 Testing
 
@@ -290,7 +297,7 @@ python examples/github_pr_review.py
 ```
 
 ## 🔗 Resources
-
+  [Superagentic Agenspy](https://super-agentic.ai/agenspy)
 - [DSPy Documentation](https://dspy.ai/)
 - [Model Context Protocol](https://modelcontextprotocol.io/)
 - [Agent2Agent Protocol](https://google.github.io/A2A/)
