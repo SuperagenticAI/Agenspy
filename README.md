@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/superagenticai-agenspy-badge.png)](https://mseep.ai/app/superagenticai-agenspy)
+
 # Agenspy (Agentic DSPy) 🚀
 
 [![PyPI Version](https://img.shields.io/pypi/v/agenspy.svg)](https://pypi.org/project/agenspy/)
